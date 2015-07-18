@@ -6,13 +6,7 @@ export default class Main extends React.Component {
     this.state = { name: this.props.name }
   }
   onChangeName(event) {
-    let name;
-    if(event.target.value == "") {
-      name = this.props.name;
-    }
-    else{
-      name = event.target.value;
-    }
+    let name = event.target.value || this.props.name
     this.setState({ name: name });
   }
   render() {
